@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ISB42403_GroupProject.Site1" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Online Game Store</title>
+    <link href="Styles/HomePageStyle.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header goes outside container for full width -->
+        <header>
+            <h1>Online Game Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="HomePage.aspx">Home</a></li>
+                    <li><a href="Products.aspx">Products</a></li>
+                    <li><a href="Cart.aspx">Cart</a></li>
+                    <li style="margin-left: auto;">
+                        <asp:ImageButton ID="btnLogout" runat="server" CssClass="logout-button" 
+                            OnClick="btnLogout_Click" ImageUrl="~/Images/logout.png" AlternateText="Logout" />
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main container for page content only -->
+        <div class="container">
+            <div class="main-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2025 Online Game Store. All rights reserved.</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
